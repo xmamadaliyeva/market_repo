@@ -14,7 +14,7 @@ jobs:
 
       - name: Trigger PythonAnywhere deploy
         run: |
-          curl -X POST "https://www.pythonanywhere.com/api/v0/user/${{ secrets.dtuxtanazarov }}/consoles/" \
-          -H "Authorization: Token ${{ secrets.79dd8da32107898667fbb9c230131ce3c1e5efd4 }}" \
+          curl -X POST "https://www.pythonanywhere.com/api/v0/user/${{ secrets.USERNAME }}/consoles/" \
+          -H "Authorization: Token ${{ secrets.TOKEN }}" \
           -d "executable=bash" \
-          -d "arguments=-c 'cd ~/online_market && ./deploy.sh'"
+          -d "arguments=-c 'cd ~/axb_ki_market && ./deploy.sh'"
